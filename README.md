@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+## Resources
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Figma [pages](https://www.figma.com/file/zpTNY9GQx8TvSkTsFY4olF/Napptilus-design?node-id=0%3A1) and [components](https://www.figma.com/file/zpTNY9GQx8TvSkTsFY4olF/Napptilus-design?node-id=1%3A3).
 
 ## Available Scripts
 
