@@ -9,6 +9,9 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
+    "sass": "^1.58.3",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-standard-scss": "^7.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -16,8 +19,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint --ignore-path .gitignore . && stylelint **/*.css",
-    "lint:fix": "eslint --fix --ignore-path .gitignore . && stylelint --fix **/*.css"
+    "lint": "eslint --ignore-path .gitignore . && stylelint **/*.scss",
+    "lint:fix": "eslint --fix --ignore-path .gitignore . && stylelint --fix **/*.scss"
   },
   "eslintConfig": {
     "extends": [
@@ -43,7 +46,6 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.32.2",
     "prettier": "^2.8.4",
-    "stylelint": "^15.2.0",
-    "stylelint-config-standard": "^30.0.1"
+    "stylelint": "^15.2.0"
   }
 }
