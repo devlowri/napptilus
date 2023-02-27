@@ -2,10 +2,14 @@ import styles from './styles.module.scss';
 import Icon from '../icon';
 
 const placeholder = '-';
-const ListItem = ({ product }) => {
-  const { brand, imgUrl, model, price } = product;
+const ListItem = ({ product, fetchAndSetSelectedProduct, loading = false }) => {
+  const { id, brand, imgUrl, model, price } = product;
   return (
-    <div className={styles.listItem}>
+    <button
+      className={styles.listItem}
+      tabIndex={0}
+      onClick={() => fetchAndSetSelectedProduct(id)}
+      disabled={loading}>
       <picture>
         <img src={imgUrl} alt="" />
       </picture>
@@ -17,7 +21,7 @@ const ListItem = ({ product }) => {
           <Icon icon="RightArrowIcon" />
         </div>
       </div>
-    </div>
+    </button>
   );
 };
 

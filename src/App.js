@@ -3,9 +3,12 @@ import { ProductAPI } from './apis/product';
 import ListItem from './components/listItem';
 import Header from './components/header';
 import SearchBar from './components/searchbar';
+import ProductDetailsPage from './pages/productDetails';
 function App() {
   const [data, setData] = useState({});
   const [filter, setFilter] = useState('');
+  const [selectedProduct, setSelectedProduct] = useState(null);
+  const [loading, setLoading] = useState(false);
   useEffect(() => {
     const fetchProducts = async () => {
       const localData = localStorage.getItem('data');
@@ -54,18 +57,35 @@ function App() {
     });
   };
 
+  const fetchAndSetSelectedProduct = async (productId) => {
+    setLoading(true);
+    const productDetails = await ProductAPI.getProductDetails(productId);
+    setLoading(false);
+    setSelectedProduct(productDetails);
+  };
+
   return (
     <main>
       <Header />
-      <section className="productList">
-        <SearchBar filter={filter} setFilter={setFilter} />
-        <div className="list">
-          {filterProducts(data.products).map((product) => {
-            const { id } = product;
-            return <ListItem key={id} product={product} />;
-          })}
-        </div>
-      </section>
+      {!selectedProduct ? (
+        <section className="productList">
+          <SearchBar filter={filter} setFilter={setFilter} />
+          <div className="list">
+            {filterProducts(data.products).map((product) => {
+              const { id } = product;
+              return (
+                <ListItem
+                  key={id}
+                  product={product}
+                  fetchAndSetSelectedProduct={fetchAndSetSelectedProduct}
+                  loading={loading}
+                />
+              );
+            })}
+          </div>
+        </section>
+      ) : null}
+      {selectedProduct ? <ProductDetailsPage product={selectedProduct} /> : null}
     </main>
   );
 }
