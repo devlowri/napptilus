@@ -5,6 +5,7 @@ import Header from './components/header';
 import SearchBar from './components/searchbar';
 function App() {
   const [data, setData] = useState({});
+  const [filter, setFilter] = useState('');
   useEffect(() => {
     const fetchProducts = async () => {
       const localData = localStorage.getItem('data');
@@ -40,13 +41,26 @@ function App() {
     }, 60000);
   }, []);
 
+  const filterProducts = (products) => {
+    if (!products) return [];
+    if (!filter) return products;
+    return products.filter((product) => {
+      const { brand, model } = product;
+      const filterToLowerCase = filter.toLowerCase();
+      const brandIncludesFilter = brand.toLowerCase().includes(filterToLowerCase);
+      const modelIncludesFilter = model.toLowerCase().includes(filterToLowerCase);
+
+      if (brandIncludesFilter || modelIncludesFilter) return product;
+    });
+  };
+
   return (
     <main>
       <Header />
       <section className="productList">
-        <SearchBar />
+        <SearchBar filter={filter} setFilter={setFilter} />
         <div className="list">
-          {data?.products?.map((product) => {
+          {filterProducts(data.products).map((product) => {
             const { id } = product;
             return <ListItem key={id} product={product} />;
           })}
