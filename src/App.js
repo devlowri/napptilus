@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { ProductAPI } from './apis/product';
 import ListItem from './components/listItem';
 import Header from './components/header';
+import SearchBar from './components/searchbar';
 function App() {
   const [data, setData] = useState({});
   useEffect(() => {
@@ -43,10 +44,13 @@ function App() {
     <main>
       <Header />
       <section className="productList">
-        {data?.products?.map((product) => {
-          const { id } = product;
-          return <ListItem key={id} product={product} />;
-        })}
+        <SearchBar />
+        <div className="list">
+          {data?.products?.map((product) => {
+            const { id } = product;
+            return <ListItem key={id} product={product} />;
+          })}
+        </div>
       </section>
     </main>
   );
