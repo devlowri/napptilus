@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { ProductAPI } from './apis/product';
 import ListItem from './components/listItem';
-
+import Header from './components/header';
 function App() {
   const [data, setData] = useState({});
   useEffect(() => {
@@ -41,6 +41,7 @@ function App() {
 
   return (
     <main>
+      <Header />
       <section className="productList">
         {data?.products?.map((product) => {
           const { id } = product;
