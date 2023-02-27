@@ -1,11 +1,11 @@
 import React from 'react';
 import * as Iconset from './iconset';
 
-const Icon = ({ icon }) => {
-  const IconComponent = Iconset[icon];
+const Icon = (props) => {
+  const IconComponent = Iconset[props.icon];
   return (
     <React.Suspense>
-      <IconComponent />
+      <IconComponent {...props} />
     </React.Suspense>
   );
 };
