@@ -1,0 +1,30 @@
+.listItem {
+  border-radius: 8px;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  picture {
+    img {
+      max-height: 11.25rem;
+      width: 100%;
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+  .itemContent {
+    padding: 16px;
+    background-color: #f7f7f7;
+    .productBrand {
+      display: block;
+      color: var(--primaryColor);
+      &::first-letter {
+        text-transform: uppercase;
+      }
+    }
+    .priceWrapper {
+      margin-top: 0.5rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}
