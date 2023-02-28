@@ -37,9 +37,12 @@ const ProductListPage = () => {
     };
     fetchProducts();
     /* Check if fetch new data is needed every minute */
-    setInterval(() => {
+    const fetchInterval = setInterval(() => {
       fetchProducts();
     }, 60000);
+    return () => {
+      clearInterval(fetchInterval);
+    };
   }, []);
 
   const filterProducts = (products) => {
