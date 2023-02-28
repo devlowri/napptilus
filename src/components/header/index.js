@@ -1,6 +1,10 @@
 import styles from './styles.module.scss';
 import Icon from '../icon';
+import { useContext } from 'react';
+import { CartContext } from '../../providers/cart';
 const Header = () => {
+  const { count } = useContext(CartContext);
+
   return (
     <header className={styles.header}>
       <div className={styles.boxBorder}>
@@ -12,7 +16,7 @@ const Header = () => {
           <div className={styles.cart}>
             <span className="body1">Cart</span>
             <Icon icon="CartIcon" />
-            <span className={`subtitle2 ${styles.badge}`}>2</span>
+            <span className={`subtitle2 ${styles.badge}`}>{count}</span>
           </div>
         </div>
       </div>

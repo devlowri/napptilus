@@ -1,8 +1,11 @@
 import styles from './styles.module.scss';
 import Icon from '../icon';
+import { useContext } from 'react';
+import { SelectedProductContext } from '../../providers/selectedProduct';
 
 const placeholder = '-';
-const ListItem = ({ product, fetchAndSetSelectedProduct, loading = false }) => {
+const ListItem = ({ product }) => {
+  const { fetchAndSetSelectedProduct, loading } = useContext(SelectedProductContext);
   const { id, brand, imgUrl, model, price } = product;
   return (
     <button

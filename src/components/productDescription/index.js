@@ -1,3 +1,4 @@
+import { Fragment } from 'react';
 import styles from './styles.module.scss';
 
 const placeholder = '-';
@@ -30,16 +31,16 @@ const ProductDescription = ({ product }) => {
 
           if (valueIsAnArray)
             return (
-              <>
+              <Fragment key={`${name}_${value}`}>
                 <li className="body2">{name}:</li>
-                <ul key={`${name}_${value}`}>
+                <ul>
                   {value.map((v) => (
                     <li key={`${name}_${v}`} className="subtitle2">
                       {v}
                     </li>
                   ))}
                 </ul>
-              </>
+              </Fragment>
             );
 
           if (valueIsAnObject) {
