@@ -17,9 +17,11 @@ export const SelectedProductProvider = ({ children }) => {
     setSelectedProduct(productDetails);
   };
 
+  const unselectProduct = () => setSelectedProduct(null);
+
   return (
     <SelectedProductContext.Provider
-      value={{ selectedProduct, fetchAndSetSelectedProduct, loading }}>
+      value={{ selectedProduct, fetchAndSetSelectedProduct, unselectProduct, loading }}>
       {children}
     </SelectedProductContext.Provider>
   );
