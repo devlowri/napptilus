@@ -1,0 +1,41 @@
+.form {
+  background-color: #f0f0f0;
+  padding: 1rem;
+  border-radius: 8px;
+  display: grid;
+  gap: 1rem;
+  @media (min-width: 640px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .select {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    select {
+      border: 1px solid #242426;
+      padding: 0.5rem;
+    }
+  }
+  .cta {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 100%;
+    width: 14rem;
+    padding: 0.5rem;
+    border-radius: 8px;
+    border: unset;
+    background-color: var(--primaryColor);
+    color: white;
+    margin-left: auto;
+    @media (min-width: 640px) {
+      grid-column: span 2;
+    }
+    &:disabled {
+      opacity: 0.6;
+    }
+    .hidden {
+      visibility: hidden;
+    }
+  }
+}
