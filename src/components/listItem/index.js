@@ -14,8 +14,8 @@ const ListItem = ({ product, fetchAndSetSelectedProduct, loading = false }) => {
         <img src={imgUrl} alt="" />
       </picture>
       <div className={styles.itemContent}>
-        <h3 className="body1">{model ?? placeholder}</h3>
-        <span className={`${styles.productBrand} subtitle1`}>{brand ?? placeholder}</span>
+        <h3 className="body1">{model ? model : placeholder}</h3>
+        <span className={`${styles.productBrand} subtitle1`}>{brand ? brand : placeholder}</span>
         <div className={styles.priceWrapper}>
           <span className="subtitle1">{price ? price : placeholder} €</span>
           <Icon icon="RightArrowIcon" />
