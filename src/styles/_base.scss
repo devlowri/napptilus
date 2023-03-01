@@ -1,7 +1,7 @@
 :root {
   --primaryColor: #4845d2;
-  --contentMaxWidth: 80rem; /*1280px*/
-  --miniumHorizontalPadding: 1.5rem; /*24px*/
+  --contentMaxWidth: 80rem; /* 1280px */
+  --miniumHorizontalPadding: 1.5rem; /* 24px */
 }
 
 body {
@@ -13,10 +13,10 @@ body {
   position: absolute;
   width: 1px;
   height: 1px;
-  padding: 0;
   margin: -1px;
+  padding: 0;
   overflow: hidden;
-  clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border-width: 0;
+  clip: rect(0, 0, 0, 0);
 }

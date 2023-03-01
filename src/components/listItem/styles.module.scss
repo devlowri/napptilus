@@ -1,46 +1,54 @@
 .listItem {
-  border-radius: 8px;
-  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
-  overflow: hidden;
-  cursor: pointer;
-  transition-property: transform;
-  transition-duration: 0.3s;
-  background-color: #fff;
   padding: 0;
-  border: unset;
+  overflow: hidden;
   text-align: inherit;
+  background-color: #fff;
+  border: unset;
+  border-radius: 8px;
+  box-shadow: 0 0 4px rgb(0 0 0 / 25%);
+  cursor: pointer;
+  transition-duration: 0.3s;
+  transition-property: transform;
+
   &:hover,
   &:focus {
     transform: translateY(-4px);
   }
+
   &:disabled {
     opacity: 0.6;
   }
+
   picture {
     height: 180px;
     overflow: hidden;
+
     img {
-      max-height: 180px;
       width: 100%;
+      max-height: 180px;
       object-fit: contain;
       object-position: center;
     }
   }
+
   .itemContent {
     padding: 16px;
     background-color: #f7f7f7;
+
     .productBrand {
       display: block;
       color: var(--primaryColor);
+
       &::first-letter {
         text-transform: uppercase;
       }
     }
+
     .priceWrapper {
-      margin-top: 0.5rem;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+      margin-top: 0.5rem;
     }
   }
 }

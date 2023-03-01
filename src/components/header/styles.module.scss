@@ -2,71 +2,83 @@
   position: sticky;
   top: 0;
   z-index: 1;
-  background-color: #fff;
   margin-bottom: 1.5rem;
-  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
+  background-color: #fff;
+  box-shadow: 0 0 8px rgb(0 0 0 / 15%);
+
   .boxBorder {
     border-bottom: 1px solid #cacaca;
+
     .centeredWrapper {
-      max-width: var(--contentMaxWidth);
-      padding-right: var(--miniumHorizontalPadding);
-      padding-left: var(--miniumHorizontalPadding);
-      margin: 0 auto;
       display: flex;
       flex-direction: row;
       gap: 1rem;
+      max-width: var(--contentMaxWidth);
+      margin: 0 auto;
+      padding-right: var(--miniumHorizontalPadding);
+      padding-left: var(--miniumHorizontalPadding);
     }
+
     .main {
+      align-items: flex-end;
+      justify-content: space-between;
       padding-top: 1rem;
       padding-bottom: 1rem;
-      justify-content: space-between;
-      align-items: flex-end;
+
       .homepageButton {
         background: unset;
         border: unset;
-        cursor: pointer;
         outline-offset: 2px;
+        cursor: pointer;
+
         .desktopLogo {
           display: none;
         }
+
         @media (min-width: 640px) {
           .mobileLogo {
             display: none;
           }
+
           .desktopLogo {
             display: block;
           }
         }
       }
+
       .cart {
+        position: relative;
         display: flex;
         flex-direction: row;
-        align-items: baseline;
         gap: 0.5rem;
-        position: relative;
+        align-items: baseline;
+
         .badge {
           --size: 1rem;
+
           position: absolute;
-          right: calc(var(--size) / -2);
           top: calc(var(--size) / -2);
+          right: calc(var(--size) / -2);
+          display: flex;
+          align-items: center;
+          justify-content: center;
           width: var(--size);
           height: var(--size);
+          color: #fff;
           background-color: var(--primaryColor);
           border-radius: 100%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          color: #fff;
         }
       }
     }
+
     .nav {
       padding-top: 0.5rem;
       padding-bottom: 0.5rem;
       color: #cacaca;
+
       .clickable {
-        cursor: pointer;
         text-decoration: underline;
+        cursor: pointer;
       }
     }
   }

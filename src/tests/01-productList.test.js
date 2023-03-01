@@ -1,4 +1,4 @@
-import { render, screen, within } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import ProductList from '../pages/productList';
 import { productsMock } from '../mocks/products';
 import userEvent from '@testing-library/user-event';
@@ -21,7 +21,7 @@ describe('When user loads the homepage', () => {
 
 describe('Product list page', () => {
   beforeAll(() => {
-    jest.spyOn(global, 'fetch');
+    jest.spyOn(window, 'fetch');
   });
 
   describe('when products are fetched', () => {

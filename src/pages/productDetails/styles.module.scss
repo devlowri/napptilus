@@ -1,21 +1,25 @@
 .productDetailsPage {
-  margin: 0 auto;
-  max-width: var(--contentMaxWidth);
-  padding: 0px var(--miniumHorizontalPadding) 1.5rem var(--miniumHorizontalPadding);
   display: grid;
   gap: 1rem;
+  max-width: var(--contentMaxWidth);
+  margin: 0 auto;
+  padding: 0 var(--miniumHorizontalPadding) 1.5rem var(--miniumHorizontalPadding);
+
   @media (min-width: 640px) {
     grid-template-columns: repeat(2, 1fr);
   }
+
   picture {
     overflow: hidden;
+
     img {
-      max-height: 180px;
       width: 100%;
+      max-height: 180px;
       object-fit: contain;
       object-position: center;
     }
   }
+
   .details {
     display: flex;
     flex-direction: column;

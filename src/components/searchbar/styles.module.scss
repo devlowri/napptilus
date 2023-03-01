@@ -1,26 +1,29 @@
 .searchbar {
   position: relative;
-  max-width: 100%;
   width: 26rem;
+  max-width: 100%;
+
   .searchInput {
     width: 100%;
     padding: 10px;
-    border-radius: 8px;
-    border: 2px solid #cacaca;
-    color: #242426;
     padding: 0.5rem 3rem 0.5rem 0.5rem;
+    color: #242426;
+    border: 2px solid #cacaca;
+    border-radius: 8px;
+
     &:focus {
       border-color: #242426;
     }
   }
+
   .iconWrapper {
     position: absolute;
     top: 0;
     right: 0;
-    height: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    height: 100%;
     padding: 0.5rem;
   }
 }
