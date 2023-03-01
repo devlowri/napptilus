@@ -61,7 +61,7 @@ const ProductListPage = () => {
   return (
     <section className={styles.productList}>
       <SearchBar filter={filter} setFilter={setFilter} />
-      <div className={styles.list}>
+      <div className={styles.list} role="list">
         {filterProducts(data.products).map((product) => {
           const { id } = product;
           return <ListItem key={id} product={product} />;

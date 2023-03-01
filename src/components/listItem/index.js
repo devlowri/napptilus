@@ -12,7 +12,8 @@ const ListItem = ({ product }) => {
       className={styles.listItem}
       tabIndex={0}
       onClick={() => fetchAndSetSelectedProduct(id)}
-      disabled={loading}>
+      disabled={loading}
+      role="listitem">
       <picture>
         <img src={imgUrl} alt="" />
       </picture>
