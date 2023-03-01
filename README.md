@@ -1,6 +1,6 @@
 ## Resources
 
-Figma [pages](https://www.figma.com/file/zpTNY9GQx8TvSkTsFY4olF/Napptilus-design?node-id=0%3A1) and [components](https://www.figma.com/file/zpTNY9GQx8TvSkTsFY4olF/Napptilus-design?node-id=1%3A3).
+Figma [pages](https://www.figma.com/file/zpTNY9GQx8TvSkTsFY4olF/Napptilus-design?node-id=0%3A1) and [components](https://www.figma.com/file/zpTNY9GQx8TvSkTsFY4olF/Napptilus-design?node-id=1%3A3) with a wireframe of the project and its components.
 
 ## Available Scripts
 
@@ -11,21 +11,17 @@ In the project directory, you can run:
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Launches the test runner in the interactive watch mode. It also creates a folder with the coverage of the tested modules.
 
 ### `npm run lint`
 
-Runs ESLint and Stylelint validations.\
+Runs ESLint and Stylelint validations.
 
 ### `npm run lint:fix`
 
-Runs and <ins>fixes</ins> ESLint and Stylelint validations.\
+Runs and <ins>fixes</ins> ESLint and Stylelint validations.
 
 ### `npm run build`
 
